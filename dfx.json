@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "student_record_backend": {
+      "main": "src/student_record_backend/main.mo",
+      "type": "motoko"
+    },
+    "student_record_frontend": {
+      "dependencies": [
+        "student_record_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/student_record_frontend/src/index.html"
+      },
+      "source": [
+        "src/student_record_frontend/assets",
+        "dist/student_record_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
